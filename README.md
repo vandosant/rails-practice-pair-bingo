@@ -51,6 +51,14 @@ And somebody else marked that they paired with me
 Then their picture should appear grayed out and unclickable
 ```
 
+**CHORE: make it use fewer database queries**
+
+```
+Write your code in such a way that the index page only
+executes a maximum of 4 queries (check the logs to confirm).
+
+You can actually do it in 3 if you are crafty enough :)
+```
 
 ## Wireframes
 
