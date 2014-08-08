@@ -8,6 +8,14 @@ User.create!(
   password_confirmation: 'password'
 )
 
+User.create!(
+  name: "Other User",
+  email: 'otheruser@example.com',
+  photo_name: 'face-02.jpeg',
+  password: 'password',
+  password_confirmation: 'password'
+)
+
 %w(02 03 04 05 06 07 08 09 10).each do |suffix|
   User.create!(
     name: Faker::Name.name,

@@ -1,0 +1,7 @@
+<h2>Record a Pairing w/ <%= @pair.name %></h2>
+
+<%= form_for [@pair, @pairing] do |f| %>
+  <%= f.label :pair_date, "When did you pair with #{@pair.name}?" %>
+  <%= f.date_field :pair_date %>
+  <%= f.submit "Create Pairing" %>
+<% end %>
