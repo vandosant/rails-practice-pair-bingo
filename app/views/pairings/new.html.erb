@@ -1,6 +1,13 @@
 <h2>Record a Pairing w/ <%= @pair.name %></h2>
 <%= image_tag @pair.photo_name %>
 <%= form_for [@pair, @pairing] do |f| %>
+  <% if f.object.errors.present? %>
+    <% f.object.errors.full_messages.each do |error| %>
+      <div class="form-row">
+        <div class="errors"><%= error %></div>
+      </div>
+    <% end %>
+  <% end %>
   <div class="form-row">
     <%= f.label :pair_date, "When did you pair with #{@pair.name}?" %>
   </div>
