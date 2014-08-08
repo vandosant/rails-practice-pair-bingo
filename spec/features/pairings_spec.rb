@@ -18,9 +18,12 @@ feature "managing pairings" do
       click_link "Face 01"
     end
 
-    fill_in "When did you pair with Other User?", with: "08-04-2014"
+    fill_in "When did you pair with Other User?", with: "04-08-2014"
     click_button "Create Pairing"
 
-    expect(page).to have_content "08-04-2014"
+    expect(page).to have_content "8/4/2014"
+    within "div.user", match: :first do
+      expect(page).to_not have_link "Face 01"
+    end
   end
 end
